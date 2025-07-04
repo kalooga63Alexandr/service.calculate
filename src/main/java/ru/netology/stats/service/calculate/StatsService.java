@@ -40,7 +40,7 @@ public class StatsService {
 
         int minIndex = 0;
         for (int i = 1; i < data.length; i++) {
-            if (data[i] < data[minIndex]) {
+            if (data[i] <= data[minIndex]) {
                 minIndex = i;
             }
         }
@@ -48,11 +48,10 @@ public class StatsService {
     }
 
     public int minSalesNumberOfMonths(int[] data) {
-        int sumInt = sumInt(data);
         int month = 0;
         int countMonth = 0;
         for (int i = 0; i < data.length; i++) {
-            if (data[month] < (sumInt / data.length)) {
+            if (data[month] <= midAmount(data)) {
                 countMonth++;
             }
             month++;
@@ -61,11 +60,11 @@ public class StatsService {
     }
 
     public int maxSalesNumberOfMonths(int[] data) {
-        int sumInt = sumInt(data);
+        int mid = midAmount(data);
         int month = 0;
         int countMonth = 0;
         for (int i = 0; i < data.length; i++) {
-            if (data[month] > (sumInt / data.length)) {
+            if (data[month] >= mid) {
                 countMonth++;
             }
             month++;

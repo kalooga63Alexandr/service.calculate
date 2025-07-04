@@ -8,7 +8,6 @@ public class ServiceCalculateTest {
     public void testSumInt() {
         StatsService service = new StatsService();
         int[] data = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        //int[] data = {1000, 20000, 5000000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 3000, 4000};
         int expected = 180;
         int actual = service.sumInt(data);
         assertEquals(expected, actual);
@@ -45,7 +44,7 @@ public class ServiceCalculateTest {
     public void testMinSalesNumberOfMonths() {
         StatsService service = new StatsService();
         int[] data = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 5; // 5 месяцев с продажами ниже среднего (8, 13, 7, 14, 14)
+        int expected = 7; // 5 месяцев с продажами ниже среднего (8, 13, 7, 14, 14)
         int actual = service.minSalesNumberOfMonths(data);
         assertEquals(expected, actual);
     }
@@ -54,7 +53,7 @@ public class ServiceCalculateTest {
     public void testMaxSalesNumberOfMonths() {
         StatsService service = new StatsService();
         int[] data = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 5; // 5 месяцев с продажами выше среднего (17, 20, 19, 20, 18)
+        int expected = 7; // 5 месяцев с продажами выше среднего (17, 20, 19, 20, 18)
         int actual = service.maxSalesNumberOfMonths(data);
         assertEquals(expected, actual);
     }
