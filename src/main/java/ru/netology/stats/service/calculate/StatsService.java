@@ -51,7 +51,7 @@ public class StatsService {
         int month = 0;
         int countMonth = 0;
         for (int i = 0; i < data.length; i++) {
-            if (data[month] <= midAmount(data)) {
+            if (data[month] < midAmount(data)) {
                 countMonth++;
             }
             month++;
@@ -64,7 +64,7 @@ public class StatsService {
         int month = 0;
         int countMonth = 0;
         for (int i = 0; i < data.length; i++) {
-            if (data[month] >= mid) {
+            if (data[month] > mid) {
                 countMonth++;
             }
             month++;
