@@ -4,24 +4,24 @@ public class Main {
 
     public static void main(String[] args) {
         StatsService service = new StatsService();
-        int[] data = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        //int[] data = new int[]{18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18};
-        int sum = service.sumInt(data);
-        System.out.println("Total sales: " + sum);
+        long[] data = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        //long[] data = new long[]{18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18};
+        long sum = service.sumInt(data);
+        System.out.println("Сумма всех продаж: " + sum);
 
-        int mid = service.midAmount(data);
-        System.out.println(mid);
+        long mid = service.midAmount(data);
+        System.out.println("Средняя сумма продаж: " + mid);
 
-        int maxMonth = service.findMaxMonth(data);
-        System.out.println("Month with peak sales: " + maxMonth);
+        long maxMonth = service.findMaxMonth(data);
+        System.out.println("Месяц с максимальными продажами: " + maxMonth);
 
-        int minMonth = service.findMinMonth(data);
-        System.out.println("Month with minimum sales: " + minMonth);
+        long minMonth = service.findMinMonth(data);
+        System.out.println("Месяц с минимальными продажами: " + minMonth);
 
-        int minSalesNumberOfMonths = service.minSalesNumberOfMonths(data);
+        long minSalesNumberOfMonths = service.minSalesNumberOfMonths(data);
         System.out.println("Минимальные продажи в течение " + minSalesNumberOfMonths + " месяцев(а)");
 
-        int maxSalesNumberOfMonths = service.maxSalesNumberOfMonths(data);
+        long maxSalesNumberOfMonths = service.maxSalesNumberOfMonths(data);
         System.out.println("Максимальные продажи в  течении " + maxSalesNumberOfMonths + " месяцев(а)");
 
     }
